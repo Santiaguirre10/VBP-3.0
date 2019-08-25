@@ -8,7 +8,7 @@ public class PuppyController : MonoBehaviour
     public float speed;
     PuppyManager puppymanager;
     GameManager gamemanager;
-    public int vida;
+    public int life;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -19,8 +19,9 @@ public class PuppyController : MonoBehaviour
     }
     void Start()
     {
-        gameObject.tag = "EnZona";
+        life = 3;
         puppymanager.puppys.Add(gameObject);
+        puppymanager.distances.Add(transform.position.x);
     }
 
     // Update is called once per frame
@@ -33,18 +34,43 @@ public class PuppyController : MonoBehaviour
         else if (tag == "Escapando")
         {
             float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, escapepoint.transform.position, step );
+            transform.position = Vector3.MoveTowards(transform.position, escapepoint.transform.position, step);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name == "Valla")
+        if (collision.name == "Valla")
         {
             gameObject.tag = "Escapando";
         }
         if (collision.name == "EscapePoint")
         {
-           gamemanager.gameover = true;
+            gamemanager.gameover = true;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Ball")
+        {
+            for (int i = 0; i < puppymanager.puppyspamer.Length; i++)
+            {
+                if (puppymanager.puppyspamer[i].transform.position.y == transform.position.y)
+                {
+                    float step = speed * Time.deltaTime;
+                    transform.position = Vector3.MoveTowards(transform.position, puppymanager.puppyspamer[i].transform.position, step);
+                }
+            }
+        }
+        if (collision.gameObject.name == "Player")
+        {
+            for (int i = 0; i < puppymanager.puppyspamer.Length; i++)
+            {
+                if (puppymanager.puppyspamer[i].transform.position.y == transform.position.y)
+                {
+                    float step = speed * Time.deltaTime;
+                    transform.position = Vector3.MoveTowards(transform.position, puppymanager.puppyspamer[i].transform.position, step);
+                }
+            }
         }
     }
 }
