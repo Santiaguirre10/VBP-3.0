@@ -1,9 +1,42 @@
 fileFormatVersion: 2
 guid: 196b6bcfd2c94a245b0b09e20287c9b1
 TextureImporter:
-  fileIDToRecycleName: {}
+  internalIDToNameTable:
+  - first:
+      213: 2833735011487815540
+    second: Chad-idle-64x64_0
+  - first:
+      213: 2485680014190120832
+    second: Chad-idle-64x64_1
+  - first:
+      213: 7537329096753184655
+    second: Chad-idle-64x64_2
+  - first:
+      213: 7253196359957562122
+    second: Chad-idle-64x64_3
+  - first:
+      213: -3178611988781228781
+    second: Chad-idle-64x64_4
+  - first:
+      213: 4237685199658000020
+    second: Chad-idle-64x64_5
+  - first:
+      213: 1034257577694686255
+    second: Chad-idle-64x64_6
+  - first:
+      213: -6083193648094413631
+    second: Chad-idle-64x64_7
+  - first:
+      213: -7017074251012373258
+    second: Chad-idle-64x64_8
+  - first:
+      213: -4264902526815665655
+    second: Chad-idle-64x64_9
+  - first:
+      213: -1783534181050681034
+    second: Chad-idle-64x64_10
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -40,7 +73,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,7 +91,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -69,17 +102,275 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Chad-idle-64x64_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 5
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd777c5aea8062a48a78f4613de13d8c
+      internalID: 2833735011487815540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 5
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80e2640afb29064381e4bf2c9f97ddb
+      internalID: 2485680014190120832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 5
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f18b08dc72067498b97dc527606e39
+      internalID: 7537329096753184655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 5
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88cd79fe1b5e1494f9eb2858bdbbbb89
+      internalID: 7253196359957562122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 5
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d608f0f027fb8e443bbdc4d3531b98a7
+      internalID: -3178611988781228781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 5
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b431fc021d29c47a54c9e3944a8e50
+      internalID: 4237685199658000020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_6
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 5
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909ccc0b6a65d15489049974c6eb2f42
+      internalID: 1034257577694686255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_7
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 5
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1509937f069e05f4f9f2a77045589ac9
+      internalID: -6083193648094413631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_8
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 5
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8a1a9ecadfb1f4287358f0bc76e265
+      internalID: -7017074251012373258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_9
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 5
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616d7e036a1bc954d8726ecd1d0e0297
+      internalID: -4264902526815665655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chad-idle-64x64_10
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 5
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3972f698e0fa554aad22e1790897124
+      internalID: -1783534181050681034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 85207832832fdd0409cced7041f48300
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

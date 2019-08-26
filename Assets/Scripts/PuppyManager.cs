@@ -11,7 +11,7 @@ public class PuppyManager : MonoBehaviour
     public float mindistance;
     public GameObject valla;
     public Vector3 objball;
-
+    // 2 y medio para y 3 para x
     // Start is called before the first frame update
     void Start()
     {
