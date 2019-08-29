@@ -9,6 +9,8 @@ public class PuppyController : MonoBehaviour
     PuppyManager puppymanager;
     GameManager gamemanager;
     public int life;
+    public Vector3 initpos;
+    public bool kicked;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -22,20 +24,14 @@ public class PuppyController : MonoBehaviour
         life = 3;
         puppymanager.puppys.Add(gameObject);
         puppymanager.distances.Add(transform.position.x);
+        initpos = transform.position;
+        kicked = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (tag == "EnZona")
-        {
-            transform.Translate(Vector3.left * Time.deltaTime);
-        }
-        else if (tag == "Escapando")
-        {
-            float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, escapepoint.transform.position, step);
-        }
+        Move();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -47,30 +43,30 @@ public class PuppyController : MonoBehaviour
         {
             gamemanager.gameover = true;
         }
+        if (collision.name == "Player")
+        {
+            gameObject.tag = "Pateado";
+        }
+        if (collision.tag == "Spamer")
+        {
+            gameObject.tag = "EnZona";
+        }
     }
-    /*private void OnCollisionEnter2D(Collision2D collision)
+    void Move()
     {
-        if (collision.gameObject.name == "Ball")
+        if (tag == "EnZona")
         {
-            for (int i = 0; i < puppymanager.puppyspamer.Length; i++)
-            {
-                if (puppymanager.puppyspamer[i].transform.position.y == transform.position.y)
-                {
-                    float step = speed * Time.deltaTime;
-                    transform.position = Vector3.MoveTowards(transform.position, puppymanager.puppyspamer[i].transform.position, step);
-                }
-            }
+            transform.Translate(Vector3.left * Time.deltaTime);
         }
-        if (collision.gameObject.name == "Player")
+        else if (tag == "Escapando")
         {
-            for (int i = 0; i < puppymanager.puppyspamer.Length; i++)
-            {
-                if (puppymanager.puppyspamer[i].transform.position.y == transform.position.y)
-                {
-                    float step = speed * Time.deltaTime;
-                    transform.position = Vector3.MoveTowards(transform.position, puppymanager.puppyspamer[i].transform.position, step);
-                }
-            }
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, escapepoint.transform.position, step);
         }
-    }*/
+        else if (tag == "Pateado")
+        {
+            float step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, initpos, step);
+        }
+    }
 }

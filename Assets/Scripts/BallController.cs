@@ -27,8 +27,6 @@ public class BallController : MonoBehaviour
     {
         if (collision.name == "SetPoint")
         {
-            Debug.Log("Funciona");
-
             if (player.transform.position.x <= -3.67f)
             {
                 hitpoint = new Vector3(player.transform.position.x + 3f, player.transform.position.y + 2.5f, 0);

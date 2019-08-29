@@ -95,7 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a976e7428783fb4da1f9992d1c8b115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
+  life: 3
+  initpos: {x: 0, y: 0, z: 0}
+  kicked: 0
 --- !u!61 &5272894446626167558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -106,7 +109,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
