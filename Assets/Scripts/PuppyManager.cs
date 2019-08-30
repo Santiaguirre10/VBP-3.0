@@ -10,7 +10,7 @@ public class PuppyManager : MonoBehaviour
     public List<float> distances;
     public float mindistance;
     public GameObject valla;
-    public Vector3 objball;
+    public Vector2 objball;
     // 2 y medio para y 3 para x
     // Start is called before the first frame update
     void Start()
@@ -45,7 +45,7 @@ public class PuppyManager : MonoBehaviour
         {
             if (mindistance == puppys[i].transform.position.x)
             {
-                objball = puppys[i].transform.position;
+                objball = new Vector2(puppys[i].transform.position.x, puppys[i].transform.position.y);
             }
         }
     }

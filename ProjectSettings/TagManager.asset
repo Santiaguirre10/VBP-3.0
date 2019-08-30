@@ -7,7 +7,14 @@ TagManager:
   - EnZona
   - Escapando
   - Spamer
-  - Pateado
+  - Ataque
+  - Golpe
+  - Rebote
+  - Defensa
+  - Armado
+  - Atacando
+  - Defendiendo
+  - Golpeado
   layers:
   - Default
   - TransparentFX

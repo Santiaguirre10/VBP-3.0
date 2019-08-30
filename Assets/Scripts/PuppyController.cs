@@ -25,13 +25,17 @@ public class PuppyController : MonoBehaviour
         puppymanager.puppys.Add(gameObject);
         puppymanager.distances.Add(transform.position.x);
         initpos = transform.position;
-        kicked = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
+        if(life <= 0)
+        {
+            puppymanager.puppys.Remove(gameObject);
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -45,11 +49,18 @@ public class PuppyController : MonoBehaviour
         }
         if (collision.name == "Player")
         {
-            gameObject.tag = "Pateado";
+            gameObject.tag = "Golpeado";
+            life--;
         }
         if (collision.tag == "Spamer")
         {
             gameObject.tag = "EnZona";
+        }
+        if (collision.tag == "Ataque" && tag == "EnZona")
+        {
+            gameObject.tag = "Golpeado";
+            life--;
+            collision.tag = "Golpe";
         }
     }
     void Move()
@@ -63,7 +74,7 @@ public class PuppyController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, escapepoint.transform.position, step);
         }
-        else if (tag == "Pateado")
+        else if (tag == "Golpeado")
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, initpos, step);
