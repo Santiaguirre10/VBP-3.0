@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    float h;
+    float v;
+    bool jumping;
+    bool attacking;
+    bool defending;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +20,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        h = CrossPlatformInputManager.GetAxis("Horizontal");
+        v = CrossPlatformInputManager.GetAxis("Vertical");
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector3.up * speed * Time.deltaTime);
@@ -30,7 +38,8 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
-        LimitedArea();
+        Move();
+        //LimitedArea();
     }
     void LimitedArea()
     {
@@ -54,5 +63,14 @@ public class PlayerController : MonoBehaviour
             float step = speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, 0.6f, 0), step);
         }
+    }
+    void Move()
+    {
+        transform.Translate(Vector3.up * speed * Time.deltaTime * v);
+        transform.Translate(Vector3.right * speed * Time.deltaTime * h);
+    }
+    public void Button()
+    {
+
     }
 }

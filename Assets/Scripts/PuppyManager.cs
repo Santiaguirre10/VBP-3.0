@@ -11,6 +11,7 @@ public class PuppyManager : MonoBehaviour
     public float mindistance;
     public GameObject valla;
     public Vector2 objball;
+
     // 2 y medio para y 3 para x
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class PuppyManager : MonoBehaviour
     }
     void PuppyCreator()
     {
-        int rdm = Random.RandomRange(0 , 3);
+        int rdm = Random.Range(0 , 3);
         Instantiate(puppy1, puppyspamer[rdm].transform.position , Quaternion.identity);
     }
     void DistanceCalculator()

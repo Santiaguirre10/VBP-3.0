@@ -22,8 +22,6 @@ public class PuppyController : MonoBehaviour
     void Start()
     {
         life = 3;
-        puppymanager.puppys.Add(gameObject);
-        puppymanager.distances.Add(transform.position.x);
         initpos = transform.position;
     }
 
@@ -49,15 +47,22 @@ public class PuppyController : MonoBehaviour
         }
         if (collision.name == "Player")
         {
+            puppymanager.puppys.Remove(gameObject);
+            puppymanager.distances.Remove(gameObject.transform.position.x);
             gameObject.tag = "Golpeado";
             life--;
         }
         if (collision.tag == "Spamer")
         {
+            puppymanager.puppys.Add(gameObject);
+            puppymanager.distances.Add(gameObject.transform.position.x);
             gameObject.tag = "EnZona";
         }
         if (collision.tag == "Ataque" && tag == "EnZona")
         {
+
+            puppymanager.puppys.Remove(gameObject);
+            puppymanager.distances.Remove(gameObject.transform.position.x);
             gameObject.tag = "Golpeado";
             life--;
             collision.tag = "Golpe";

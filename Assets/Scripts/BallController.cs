@@ -10,8 +10,8 @@ public class BallController : MonoBehaviour
     public PuppyManager puppysmanager;
     public Transform rebound;
     public Transform setpoint;
-    public float x;
-    public float y;
+    float x;
+    float y;
 
     // Start is called before the first frame update  -0.67
     void Start()
@@ -21,8 +21,7 @@ public class BallController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Move();
+    {Move();
     }
     void Move()
     {
@@ -86,8 +85,8 @@ public class BallController : MonoBehaviour
         }*/
         if (collision.name == "Rebound")
         {
-            x = Random.Range(-8.85f, -0.5f);
-            y = Random.Range(0.6f, 2.95f);
+            x = Random.Range(-8.75f, -0.27f);
+            y = Random.Range(-2.95f, 0.25f);
             gameObject.tag = "Rebote";
         }
     }
